@@ -130,3 +130,25 @@ dmypy.json
 
 # catboost stuff
 catboost_info/
+
+#
+*~
+.DS_Store
+# http://www.gnu.org/software/automake
+
+# Other
+.*.swp
+*~
+\#*
+
+# Mac OSX
+.DS_Store
+
+# Eclipse
+.settings
+.project
+.pydevproject
+
+# Pycharm
+.idea
+
