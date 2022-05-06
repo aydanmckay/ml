@@ -6,7 +6,7 @@ stilts="stilts -Xmx150G -Djava.io.tmpdir=${scratch} -verbose"
 
 masswisesdssgalex=/arc/home/aydanmckay/pristine-2mass-wise-sdss-galex-exact.fits
 cfisgaialegacypans=/arc/home/aydanmckay/pristine-cfis-pans-gaia-legacy-exact.fits
-outfile=/arc/home/aydanmckay/pristine-xmatch-phottable-exact.csv
+outfile=/arc/home/aydanmckay/pristine-xmatch-phottable-exact1.fits
 
 ${stilts} tmatch2 \
         in1=${masswisesdssgalex} \
