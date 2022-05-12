@@ -13,7 +13,7 @@ ${stilts} tmatch2 \
         icmd1="colmeta -name ra RA(CaHK); colmeta -name dec Dec(CaHK)" \
         values1='ra dec CaHK' \
         in2=${gaia} \
-        icmd2="keepcols 'RA(CaHK) Dec(CaHK) CaHK_0 E_BV parallax parallax_error pmra pmra_error pmdec pmdec_error phot_g_mean_mag phot_bp_mean_mag phot_rp_mean_mag dr2_radial_velocity dr2_radial_velocity_error phot_g_mean_mag_error phot_bp_mean_mag_error phot_rp_mean_mag_error angDist'" \
+        icmd2="keepcols 'RA(CaHK) Dec(CaHK) CaHK_0 source_id E_BV parallax parallax_error pmra pmra_error pmdec pmdec_error phot_g_mean_mag phot_bp_mean_mag phot_rp_mean_mag dr2_radial_velocity dr2_radial_velocity_error phot_g_mean_mag_error phot_bp_mean_mag_error phot_rp_mean_mag_error angDist'" \
         values2='RA(CaHK) Dec(CaHK) CaHK_0' \
         matcher=exact+exact+exact \
         join=1and2 \
