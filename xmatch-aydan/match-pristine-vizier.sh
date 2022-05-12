@@ -116,3 +116,14 @@ stilts cdsskymatch \
 	find=each \
 	blocksize=500000 \
 	out=/arc/home/aydanmckay/xmatch/pristine_sdss_photobj_dr17.fits
+
+# match with Pan-STARRS dr1
+stilts cdsskymatch \
+    in=/arc/projects/k-pop/pristine/Pristine_CaHK.fits \
+    icmd="keepcols 'RA(CaHK) Dec(CaHK) CaHK_0 e_CaHK flag'; colmeta -name CaHK CaHK_0" \
+    ra='RA(CaHK)' dec='Dec(CaHK)' \
+	cdstable='PanSTARRS DR1' \
+	radius=1 \
+	find=each \
+	blocksize=500000 \
+	out=/arc/home/aydanmckay/xmatch/pristine_panstarrs_dr1.fits
