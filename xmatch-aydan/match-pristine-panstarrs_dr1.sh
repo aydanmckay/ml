@@ -11,4 +11,4 @@ stilts cdsskymatch \
 	radius=1 \
 	find=each \
 	blocksize=500000 \
-	out=/arc/home/aydanmckay/pristine_panstarrs_dr1.fits
+	out=/arc/home/aydanmckay/tables/pristine_panstarrs_dr1.fits

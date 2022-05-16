@@ -6,7 +6,7 @@ stilts="stilts -Xmx150G -Djava.io.tmpdir=${scratch} -verbose"
 
 sdssphot=/arc/projects/k-pop/pristine/xmatch/pristine_sdss_photobj_dr17.fits
 galex=/arc/projects/k-pop/pristine/xmatch/pristine_galex_gr67.fits
-outfile=/arc/home/aydanmckay/pristine-sdssphot-galex.fits
+outfile=/arc/home/aydanmckay/tables/pristine-sdssphot-galex.fits
 
 ${stilts} tmatch2 \
         in1=${sdssphot} \

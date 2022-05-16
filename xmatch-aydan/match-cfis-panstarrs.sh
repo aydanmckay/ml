@@ -6,7 +6,7 @@ stilts="stilts -Xmx150G -Djava.io.tmpdir=${scratch} -verbose"
 
 cfis=/arc/projects/k-pop/pristine/xmatch/pristine_unions_cfis_dr3.fits
 pan=/arc/projects/k-pop/pristine/xmatch/pristine_unions_panstarrs_dr3.fits
-outfile=/arc/home/aydanmckay/pristine-cfis-panstarrs.fits
+outfile=/arc/home/aydanmckay/tables/pristine-cfis-panstarrs.fits
 
 ${stilts} tmatch2 \
         in1=${cfis} \

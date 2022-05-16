@@ -6,7 +6,7 @@ stilts="stilts -Xmx150G -Djava.io.tmpdir=${scratch} -verbose"
 
 gaia=/arc/projects/k-pop/pristine/xmatch/pristine_gaia_edr3.fits
 legacy=/arc/projects/k-pop/pristine/xmatch/pristine_legacysurvey_dr9.fits
-outfile=/arc/home/aydanmckay/pristine-legacy-gaiaedr3-exact.fits
+outfile=/arc/home/aydanmckay/tables/pristine-legacy-gaiaedr3-exact.fits
 
 ${stilts} tmatch2 \
         in1=${legacy} \

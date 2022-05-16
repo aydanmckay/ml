@@ -4,9 +4,9 @@
 scratch=/scratch
 stilts="stilts -Xmx150G -Djava.io.tmpdir=${scratch} -verbose"
 
-catmass=/arc/home/aydanmckay/pristine-2mass-catwise-exact.fits
-galsdss=/arc/home/aydanmckay/pristine-sdssphot-galex-exact.fits
-outfile=/arc/home/aydanmckay/pristine-2mass-wise-sdss-galex-exact.fits
+catmass=/arc/home/aydanmckay/tables/pristine-2mass-catwise-exact.fits
+galsdss=/arc/home/aydanmckay/tables/pristine-sdssphot-galex-exact.fits
+outfile=/arc/home/aydanmckay/tables/pristine-2mass-wise-sdss-galex-exact.fits
 
 ${stilts} tmatch2 \
         in1=${catmass} \

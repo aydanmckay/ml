@@ -6,7 +6,7 @@ stilts="stilts -Xmx150G -Djava.io.tmpdir=${scratch} -verbose"
 
 mass=/arc/projects/k-pop/pristine/xmatch/pristine_2mass.fits
 catwise=/arc/projects/k-pop/pristine/xmatch/pristine_catwise_2020.fits
-outfile=/arc/home/aydanmckay/pristine-2mass-catwise.fits
+outfile=/arc/home/aydanmckay/tables/pristine-2mass-catwise.fits
 
 ${stilts} tmatch2 \
         in1=${mass} \

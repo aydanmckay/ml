@@ -4,9 +4,9 @@
 scratch=/scratch
 stilts="stilts -Xmx150G -Djava.io.tmpdir=${scratch} -verbose"
 
-phots=/arc/home/aydanmckay/pristine-phottable-exact.fits
+phots=/arc/home/aydanmckay/tables/pristine-phottable-exact.fits
 lamost=/arc/projects/k-pop/pristine/xmatch/pristine_lamost_dr8_gaiaedr3.fits
-outfile=/arc/home/aydanmckay/pristine-phottable-lamost.fits
+outfile=/arc/home/aydanmckay/tables/pristine-phottable-lamost.fits
 
 ${stilts} tmatch2 \
         in1=${phots} \

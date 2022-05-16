@@ -4,9 +4,9 @@
 scratch=/scratch
 stilts="stilts -Xmx150G -Djava.io.tmpdir=${scratch} -verbose"
 
-gaialeg=/arc/home/aydanmckay/pristine-legacy-gaiaedr3-exact.fits
-cfispan=/arc/home/aydanmckay/pristine-cfis-panstarrs-exact.fits
-outfile=/arc/home/aydanmckay/pristine-cfis-pans-gaia-legacy-exact.fits
+gaialeg=/arc/home/aydanmckay/tables/pristine-legacy-gaiaedr3-exact.fits
+cfispan=/arc/home/aydanmckay/tables/pristine-cfis-panstarrs-exact.fits
+outfile=/arc/home/aydanmckay/tables/pristine-cfis-pans-gaia-legacy-exact.fits
 
 ${stilts} tmatch2 \
         in1=${gaialeg} \
