@@ -3,7 +3,7 @@
 ephemeral=/scratch
 stilts="stilts -Xmx50G -Djava.io.tmpdir=${ephemeral} -verbose"
 
-dir=/arc/home/aydanmckay/xmatch/
+dir=/arc/home/aydanmckay/tables/
 in1=/arc/home/aydanmckay/xmatch/pristine-lamost-gaia-inter.fits
 
 ########################
