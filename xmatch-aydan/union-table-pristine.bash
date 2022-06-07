@@ -148,7 +148,7 @@ ${stilts} tmatch2 \
 #        in1=${in1} \
 #        values1='ra dec CaHK' \
 #        in2=${in2} \
-#        icmd2="keepcols 'RA(CaHK) Dec(CaHK) CaHK_0 TEFF_PASTEL LOGG_PASTEL FEH_PASTEL rv err_rv err_teff_pastel err_feh_pastel err_logg_pastel Separation'; colmeta -name teff_past_lam TEFF_PASTEL; colmeta -name logg_past_lam LOGG_PASTEL; colmeta -name feh_past_lam FEH_PASTEL; colmeta -name rv_lam rv; colmeta -name rv_lam_err err_rv; colmeta -name teff_past_lam_err err_teff_pastel; colmeta -name feh_past_lam_err err_feh_pastel; colmeta -name logg_past_lam_err err_logg_pastel; colmeta -name pris_sdsss_sep Separation" \
+#        icmd2="keepcols 'RA(CaHK) Dec(CaHK) CaHK_0 TEFF_PASTEL LOGG_PASTEL FEH_PASTEL rv err_rv err_teff_pastel err_feh_pastel err_logg_pastel Separation'; colmeta -name teff_past_lam TEFF_PASTEL; colmeta -name logg_past_lam LOGG_PASTEL; colmeta -name feh_past_lam FEH_PASTEL; colmeta -name rv_lam rv; colmeta -name rv_lam_err err_rv; colmeta -name teff_past_lam_err err_teff_pastel; colmeta -name feh_past_lam_err err_feh_pastel; colmeta -name logg_past_lam_err err_logg_pastel; colmeta -name pris_lam_sep Separation" \
 #        values2='RA(CaHK) Dec(CaHK) CaHK_0' \
 #        matcher=exact+exact+exact \
 #        join=1and2 \
