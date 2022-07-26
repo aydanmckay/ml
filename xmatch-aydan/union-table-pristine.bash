@@ -7,7 +7,7 @@ stilts="stilts -Xmx50G -Djava.io.tmpdir=${ephemeral} -verbose"
 
 in1=/arc/projects/k-pop/pristine/xmatch/pristine_gaia_edr3.fits
 in2=/arc/projects/k-pop/pristine/xmatch/pristine_2mass.fits
-outfile=/arc/home/aydanmckay/union-phot_only-table.fits
+outfile=/arc/home/aydanmckay/union-spec-phot-table.fits
 
 ${stilts} tmatch2 \
        in1=${in1} \
@@ -21,7 +21,7 @@ ${stilts} tmatch2 \
        ocmd="delcols 'RA(CaHK)_2 Dec(CaHK)_2 CaHK_0_2'; colmeta -name ra RA(CaHK)_1; colmeta -name dec Dec(CaHK)_1; colmeta -name CaHK CaHK_0_1" \
        out=${outfile}
        
-in1=/arc/home/aydanmckay/union-phot_only-table.fits
+in1=/arc/home/aydanmckay/union-spec-phot-table.fits
 in2=/arc/projects/k-pop/pristine/xmatch/pristine_unions_cfis_dr3.fits
 
 ${stilts} tmatch2 \
@@ -100,57 +100,57 @@ ${stilts} tmatch2 \
        ocmd="delcols 'RA(CaHK) Dec(CaHK) CaHK_0'" \
        out=${outfile}
 
-# in2=/arc/projects/k-pop/pristine/xmatch/pristine_sdss_apogee_dr17.fits
+in2=/arc/projects/k-pop/pristine/xmatch/pristine_sdss_apogee_dr17.fits
 
-# ${stilts} tmatch2 \
-#        in1=${in1} \
-#        values1='ra dec CaHK' \
-#        in2=${in2} \
-#        suffix2=_apo \
-#        icmd2="keepcols 'RA(CaHK) Dec(CaHK) CaHK_0 RV_TEFF RV_LOGG RV_FEH RV_ALPHA TEFF TEFF_ERR LOGG LOGG_ERR M_H M_H_ERR ALPHA_M ALPHA_M_ERR FE_H FE_H_SPEC FE_H_ERR Separation; colmeta -name pris_sep Separation'" \
-#        values2='RA(CaHK) Dec(CaHK) CaHK_0' \
-#        matcher=exact+exact+exact \
-#        join=1and2 \
-#        ocmd="delcols 'RA(CaHK)_apo Dec(CaHK)_apo CaHK_0_apo'" \
-#        out=${outfile}
+${stilts} tmatch2 \
+       in1=${in1} \
+       values1='ra dec CaHK' \
+       in2=${in2} \
+       suffix2=_apo \
+       icmd2="keepcols 'RA(CaHK) Dec(CaHK) CaHK_0 RV_TEFF RV_LOGG RV_FEH RV_ALPHA TEFF TEFF_ERR LOGG LOGG_ERR M_H M_H_ERR ALPHA_M ALPHA_M_ERR FE_H FE_H_SPEC FE_H_ERR Separation; colmeta -name pris_sep Separation'" \
+       values2='RA(CaHK) Dec(CaHK) CaHK_0' \
+       matcher=exact+exact+exact \
+       join=1and2 \
+       ocmd="delcols 'RA(CaHK)_apo Dec(CaHK)_apo CaHK_0_apo'" \
+       out=${outfile}
        
-# in2=/arc/projects/k-pop/pristine/xmatch/pristine_sdss_sspp_dr17.fits
+in2=/arc/projects/k-pop/pristine/xmatch/pristine_sdss_sspp_dr17.fits
 
-# ${stilts} tmatch2 \
-#        in1=${in1} \
-#        values1='ra dec CaHK' \
-#        in2=${in2} \
-#        suffix2=_sspp \
-#        icmd2="keepcols 'RA(CaHK) Dec(CaHK) CaHK_0 EBV TEFF_SPEC TEFF_SPEC_UNC LOGG_SPEC LOGG_SPEC_UNC FEH_SPEC FEH_SPEC_UNC Separation; colmeta -name pris_sep Separation'" \
-#        values2='RA(CaHK) Dec(CaHK) CaHK_0' \
-#        matcher=exact+exact+exact \
-#        join=1and2 \
-#        ocmd="delcols 'RA(CaHK)_sspp Dec(CaHK)_sspp CaHK_0_sspp'" \
-#        out=${outfile}
+${stilts} tmatch2 \
+       in1=${in1} \
+       values1='ra dec CaHK' \
+       in2=${in2} \
+       suffix2=_sspp \
+       icmd2="keepcols 'RA(CaHK) Dec(CaHK) CaHK_0 EBV TEFF_SPEC TEFF_SPEC_UNC LOGG_SPEC LOGG_SPEC_UNC FEH_SPEC FEH_SPEC_UNC Separation; colmeta -name pris_sep Separation'" \
+       values2='RA(CaHK) Dec(CaHK) CaHK_0' \
+       matcher=exact+exact+exact \
+       join=1and2 \
+       ocmd="delcols 'RA(CaHK)_sspp Dec(CaHK)_sspp CaHK_0_sspp'" \
+       out=${outfile}
 
-# in2=/arc/projects/k-pop/pristine/xmatch/pristine_sdss_specobj_dr17.fits
+in2=/arc/projects/k-pop/pristine/xmatch/pristine_sdss_specobj_dr17.fits
 
-# ${stilts} tmatch2 \
-#        in1=${in1} \
-#        values1='ra dec CaHK' \
-#        in2=${in2} \
-#        icmd2="keepcols 'RA(CaHK) Dec(CaHK) CaHK_0 CLASS SUBCLASS Z Z_ERR Separation'; colmeta -name class_sdss CLASS; colmeta -name subclass_sdss SUBCLASS; colmeta -name z_sdss Z; colmeta -name z_sdss_err Z_ERR; colmeta -name pris_sdsss_sep Separation" \
-#        values2='RA(CaHK) Dec(CaHK) CaHK_0' \
-#        matcher=exact+exact+exact \
-#        join=1and2 \
-#        ocmd="delcols 'RA(CaHK) Dec(CaHK) CaHK_0'" \
-#        out=${outfile}
+${stilts} tmatch2 \
+       in1=${in1} \
+       values1='ra dec CaHK' \
+       in2=${in2} \
+       icmd2="keepcols 'RA(CaHK) Dec(CaHK) CaHK_0 CLASS SUBCLASS Z Z_ERR Separation'; colmeta -name class_sdss CLASS; colmeta -name subclass_sdss SUBCLASS; colmeta -name z_sdss Z; colmeta -name z_sdss_err Z_ERR; colmeta -name pris_sdsss_sep Separation" \
+       values2='RA(CaHK) Dec(CaHK) CaHK_0' \
+       matcher=exact+exact+exact \
+       join=1and2 \
+       ocmd="delcols 'RA(CaHK) Dec(CaHK) CaHK_0'" \
+       out=${outfile}
 
        
-# in2=/arc/projects/k-pop/pristine/xmatch/pristine_lamost_dr8_gaiaedr3.fits
+in2=/arc/projects/k-pop/pristine/xmatch/pristine_lamost_dr8_gaiaedr3.fits
 
-# ${stilts} tmatch2 \
-#        in1=${in1} \
-#        values1='ra dec CaHK' \
-#        in2=${in2} \
-#        icmd2="keepcols 'RA(CaHK) Dec(CaHK) CaHK_0 TEFF_PASTEL LOGG_PASTEL FEH_PASTEL rv err_rv err_teff_pastel err_feh_pastel err_logg_pastel Separation'; colmeta -name teff_past_lam TEFF_PASTEL; colmeta -name logg_past_lam LOGG_PASTEL; colmeta -name feh_past_lam FEH_PASTEL; colmeta -name rv_lam rv; colmeta -name rv_lam_err err_rv; colmeta -name teff_past_lam_err err_teff_pastel; colmeta -name feh_past_lam_err err_feh_pastel; colmeta -name logg_past_lam_err err_logg_pastel; colmeta -name pris_lam_sep Separation" \
-#        values2='RA(CaHK) Dec(CaHK) CaHK_0' \
-#        matcher=exact+exact+exact \
-#        join=1and2 \
-#        ocmd="delcols 'RA(CaHK) Dec(CaHK) CaHK_0'" \
-#        out=${outfile}
+${stilts} tmatch2 \
+       in1=${in1} \
+       values1='ra dec CaHK' \
+       in2=${in2} \
+       icmd2="keepcols 'RA(CaHK) Dec(CaHK) CaHK_0 TEFF_PASTEL LOGG_PASTEL FEH_PASTEL rv err_rv err_teff_pastel err_feh_pastel err_logg_pastel Separation'; colmeta -name teff_past_lam TEFF_PASTEL; colmeta -name logg_past_lam LOGG_PASTEL; colmeta -name feh_past_lam FEH_PASTEL; colmeta -name rv_lam rv; colmeta -name rv_lam_err err_rv; colmeta -name teff_past_lam_err err_teff_pastel; colmeta -name feh_past_lam_err err_feh_pastel; colmeta -name logg_past_lam_err err_logg_pastel; colmeta -name pris_lam_sep Separation" \
+       values2='RA(CaHK) Dec(CaHK) CaHK_0' \
+       matcher=exact+exact+exact \
+       join=1and2 \
+       ocmd="delcols 'RA(CaHK) Dec(CaHK) CaHK_0'" \
+       out=${outfile}
