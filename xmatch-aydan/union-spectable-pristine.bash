@@ -1,7 +1,8 @@
 #!/bin/bash
+# 
 
 ephemeral=/scratch
-stilts="stilts -Xmx50G -Djava.io.tmpdir=${ephemeral} -verbose"
+stilts="stilts -Xmx150G -Djava.io.tmpdir=${ephemeral} -verbose"
 
 ########################
 in1=/arc/projects/k-pop/pristine/xmatch/pristine_sdss_sspp_dr17.fits
@@ -19,7 +20,7 @@ ${stilts} tmatch2 \
        values2='RA(CaHK) Dec(CaHK) CaHK_0' \
        matcher=exact+exact+exact \
        join=1or2 \
-       ocmd="delcols 'RA(CaHK)_apo Dec(CaHK)_apo CaHK_0_apo; colmeta -name ra RA(CaHK)_sspp; colmeta -name dec Dec(CaHK)_sspp; colmeta -name CaHK CaHK_0_sspp'" \
+       ocmd="delcols 'RA(CaHK)_apo Dec(CaHK)_apo CaHK_0_apo'; colmeta -name ra RA(CaHK)_sspp; colmeta -name dec Dec(CaHK)_sspp; colmeta -name CaHK CaHK_0_sspp" \
        out=${outfile}
 
 in1=/arc/home/aydanmckay/union-spec-phot-table.fits
@@ -29,7 +30,7 @@ ${stilts} tmatch2 \
        in1=${in1} \
        values1='ra dec CaHK' \
        in2=${in2} \
-       icmd2="keepcols 'RA(CaHK) Dec(CaHK) CaHK_0 TEFF_PASTEL LOGG_PASTEL FEH_PASTEL rv err_rv err_teff_pastel err_feh_pastel err_logg_pastel Separation'; colmeta -name teff_past_lam TEFF_PASTEL; colmeta -name logg_past_lam LOGG_PASTEL; colmeta -name feh_past_lam FEH_PASTEL; colmeta -name rv_lam rv; colmeta -name rv_lam_err err_rv; colmeta -name teff_past_lam_err err_teff_pastel; colmeta -name feh_past_lam_err err_feh_pastel; colmeta -name logg_past_lam_err err_logg_pastel; colmeta -name pris_lam_sep Separation" \
+       icmd2="keepcols 'RA(CaHK) Dec(CaHK) CaHK_0 source_id TEFF_PASTEL LOGG_PASTEL FEH_PASTEL rv err_rv err_teff_pastel err_feh_pastel err_logg_pastel Separation'; colmeta -name teff_past_lam TEFF_PASTEL; colmeta -name logg_past_lam LOGG_PASTEL; colmeta -name feh_past_lam FEH_PASTEL; colmeta -name rv_lam rv; colmeta -name rv_lam_err err_rv; colmeta -name teff_past_lam_err err_teff_pastel; colmeta -name feh_past_lam_err err_feh_pastel; colmeta -name logg_past_lam_err err_logg_pastel; colmeta -name pris_lam_sep Separation; colmeta -name lam_gaia_source_id source_id" \
        values2='RA(CaHK) Dec(CaHK) CaHK_0' \
        matcher=exact+exact+exact \
        join=1or2 \
@@ -42,7 +43,7 @@ ${stilts} tmatch2 \
        in1=${in1} \
        values1='ra dec CaHK' \
        in2=${in2} \
-       icmd2="keepcols 'RA(CaHK) Dec(CaHK) CaHK_0 e_CaHK E_BV parallax parallax_error pmra pmra_error pmdec pmdec_error phot_g_mean_mag phot_bp_mean_mag phot_rp_mean_mag dr2_radial_velocity dr2_radial_velocity_error phot_g_mean_mag_error phot_bp_mean_mag_error phot_rp_mean_mag_error angDist'; colmeta -name para_gaia parallax; colmeta -name para_gaia_err parallax_error; colmeta -name pmra_gaia pmra; colmeta -name pmra_gaia_err pmra_error; colmeta -name pmde_gaia pmdec; colmeta -name pmde_gaia_err pmdec_error; colmeta -name g_gaia phot_g_mean_mag; colmeta -name bp_gaia phot_bp_mean_mag; colmeta -name rp_gaia phot_rp_mean_mag; colmeta -name rv_gaia dr2_radial_velocity; colmeta -name rv_gaia_err dr2_radial_velocity_error; colmeta -name g_gaia_err phot_g_mean_mag_error; colmeta -name bp_gaia_err phot_bp_mean_mag_error; colmeta -name rp_gaia_err phot_rp_mean_mag_error; colmeta -name pris_gaia_sep angDist" \
+       icmd2="keepcols 'RA(CaHK) Dec(CaHK) CaHK_0 e_CaHK E_BV source_id parallax parallax_error pmra pmra_error pmdec pmdec_error phot_g_mean_mag phot_bp_mean_mag phot_rp_mean_mag dr2_radial_velocity dr2_radial_velocity_error phot_g_mean_mag_error phot_bp_mean_mag_error phot_rp_mean_mag_error angDist'; colmeta -name para_gaia parallax; colmeta -name para_gaia_err parallax_error; colmeta -name pmra_gaia pmra; colmeta -name pmra_gaia_err pmra_error; colmeta -name pmde_gaia pmdec; colmeta -name pmde_gaia_err pmdec_error; colmeta -name g_gaia phot_g_mean_mag; colmeta -name bp_gaia phot_bp_mean_mag; colmeta -name rp_gaia phot_rp_mean_mag; colmeta -name rv_gaia dr2_radial_velocity; colmeta -name rv_gaia_err dr2_radial_velocity_error; colmeta -name g_gaia_err phot_g_mean_mag_error; colmeta -name bp_gaia_err phot_bp_mean_mag_error; colmeta -name rp_gaia_err phot_rp_mean_mag_error; colmeta -name pris_gaia_sep angDist; colmeta -name gaia_source_id source_id" \
        values2='RA(CaHK) Dec(CaHK) CaHK_0' \
        matcher=exact+exact+exact \
        join=all1 \
