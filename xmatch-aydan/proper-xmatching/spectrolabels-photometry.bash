@@ -12,7 +12,7 @@ in4=/arc/projects/k-pop/pristine/xmatch/pristine_gaia_edr3.fits
 in5=/arc/projects/k-pop/pristine/xmatch/pristine_unions_panstarrs_dr3.fits
 in6=/arc/projects/k-pop/pristine/xmatch/pristine_sdss_photobj_dr17.fits
 in7=/arc/home/aydanmckay/xmatch/pristine_panstarrs_dr1.fits
-outfile=/arc/home/aydanmckay/union-spec-phot-table.fits
+outfile=/arc/home/aydanmckay/intermediarytables/union-spec-phot-table.fits
 
 ${stilts} tmatchn nin=7 \
        in1=${in1} \

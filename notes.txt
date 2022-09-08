@@ -1,0 +1,4 @@
+So far we have the proper working code files:
+/arc/home/aydanmckay/ml/torchnn/prepdatadr3.ipynb
+/arc/home/aydanmckay/ml/torchnn/network.ipynb
+/arc/home/aydanmckay/ml/torchnn/trainedmodel.ipynb for testing things
