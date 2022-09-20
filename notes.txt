@@ -1,4 +1,31 @@
 So far we have the proper working code files:
-/arc/home/aydanmckay/ml/torchnn/prepdatadr3.ipynb
 /arc/home/aydanmckay/ml/torchnn/network.ipynb
 /arc/home/aydanmckay/ml/torchnn/trainedmodel.ipynb for testing things
+/arc/home/aydanmckay/ml/concat.ipynb
+/arc/home/aydanmckay/ml/ColumnAVG.ipynb
+
+/arc/home/aydanmckay/gaiahike/bp_rp_apogee.fits
+/arc/home/aydanmckay/ml/network/prepdatadr3proper.ipynb
+/arc/home/aydanmckay/datacuts.h5
+/arc/home/aydanmckay/torchresmodel/modelL2minmaxcutsbl32lr-2SGDep100.pth
+/arc/home/aydanmckay/torchresplots/lossL2minmaxcutsbl32lr-2SGDep100.png
+/arc/home/aydanmckay/torchresplots/predictionscomparisons.png
+
+/arc/home/aydanmckay/input_catalogue.fits
+/arc/home/aydanmckay/ml/torchnn/prepinputcat.ipynb
+/arc/home/aydanmckay/input_catalogue.h5
+/arc/home/aydanmckay/torchresmodel/inputcatmodelL2minmaxcutsbl32lr-2SGDep100.pth
+/arc/home/aydanmckay/torchresplots/inputcatlossL2minmaxcutsbl32lr-2SGDep100.png
+/arc/home/aydanmckay/torchresplots/inputcatpredictionscomparisons.png
+
+Here's a problem, Gaia-ESO does not have any alpha abundances so I would need to calculate that myself
+same with rave but there's a way to get it based on matching with the cnn catalogue
+
+to obtain rave catalaogue:
+
+SELECT t1.rave_obs_id, t1.ra_input, t1.dec_input, t2.teff_cal_madera, t2.teff_error_madera, t2.logg_cal_madera, t2.logg_error_madera, t2.m_h_cal_madera, t2.m_h_error_madera, t2.snr_madera, t2.algo_conv_madera,
+t3.spectrum_png, t3.spectrum_fits
+FROM ravedr6.dr6_obsdata AS t1 
+JOIN ravedr6.dr6_madera AS t2 ON t1.rave_obs_id = t2.rave_obs_id 
+JOIN ravedr6.dr6_spectra AS t3 ON t1.rave_obs_id = t3.rave_obs_id 
+AND t2.algo_conv_madera = 1
