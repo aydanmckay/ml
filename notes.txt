@@ -29,3 +29,5 @@ FROM ravedr6.dr6_obsdata AS t1
 JOIN ravedr6.dr6_madera AS t2 ON t1.rave_obs_id = t2.rave_obs_id 
 JOIN ravedr6.dr6_spectra AS t3 ON t1.rave_obs_id = t3.rave_obs_id 
 AND t2.algo_conv_madera = 1
+
+at https://www.rave-survey.org/query/

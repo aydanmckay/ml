@@ -64,3 +64,24 @@ ${stilts} cdsskymatch ifmt=fits \
         radius=2 \
         cdstable=I/355/xpsummary \
         find=best
+# 
+
+${stilts} cdsskymatch ifmt=csv \
+        in=/arc/projects/k-pop/pristine/new_catalogues_220604/CaHKsynth_AllSky/CaHKsynth_all_EBVm0.5_220827.csv.gz \
+        ofmt=fits \
+        out=/arc/home/aydanmckay/intermediarytables/pristine_x_xpsummary.fits \
+        ra="ra" \
+        dec="dec" \
+        radius=2 \
+        cdstable=I/355/xpsummary \
+        find=best
+
+# ${stilts} cdsskymatch \
+#         in=I/355/rvsmean \
+#         ofmt=fits \
+#         out=/arc/home/aydanmckay/intermediarytables/gaia-rvs_x_xpsummary.fits \
+#         ra="RA" \
+#         dec="DECLINATION" \
+#         radius=2 \
+#         cdstable=I/355/xpsummary \
+#         find=best
