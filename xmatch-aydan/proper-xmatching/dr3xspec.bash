@@ -4,7 +4,8 @@ ephemeral=/scratch
 stilts="stilts -Xmx50G -Djava.io.tmpdir=${ephemeral} -verbose"
 file="/arc/home/aydanmckay/ml/files.txt"
 dir=/arc/home/aydanmckay/dr3tables
-in1=/arc/home/aydanmckay/intermediarytables/spec-xpsummary.fits
+# in1=/arc/home/aydanmckay/intermediarytables/spec-xpsummary.fits
+in1=/arc/home/aydanmckay/intermediarytables/spec-paramp.fits
 
 function outfile() {
     base1=$(basename ${in2})

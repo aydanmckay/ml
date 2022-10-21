@@ -13,6 +13,7 @@ So far we have the proper working code files:
 
 /arc/home/aydanmckay/input_catalogue.fits
 /arc/home/aydanmckay/ml/torchnn/prepinputcat.ipynb
+/arc/home/aydanmckay/ml/ColumnAVG.ipynb
 /arc/home/aydanmckay/input_catalogue.h5
 /arc/home/aydanmckay/torchresmodel/inputcatmodelL2minmaxcutsbl32lr-2SGDep100.pth
 /arc/home/aydanmckay/torchresplots/inputcatlossL2minmaxcutsbl32lr-2SGDep100.png
@@ -31,3 +32,17 @@ JOIN ravedr6.dr6_spectra AS t3 ON t1.rave_obs_id = t3.rave_obs_id
 AND t2.algo_conv_madera = 1
 
 at https://www.rave-survey.org/query/
+
+Okay now going to repeat the calculations done above with the xpsummary table for the param table so that for stars with an RVS label can be included, as well as being able to obtain the xp derived labels that gaia supplied.
+
+Calculation has been redone using RVS spectra as well, and they are stated below:
+
+files for playing around with (no xp-coeffs) created with
+/arc/home/aydanmckay/ml/ColumnAVG-xtra.ipynb
+
+/arc/home/aydanmckay/input_catalogue_simple_average_datacuts.fits , table with xp coeffs
+/arc/home/aydanmckay/input_catalogue_datacuts_paramp_renamed.fits , table with xp coeffs and not averaged
+/arc/home/aydanmckay/spectable_simple_average_datacuts.fits , table without xp coeffs
+/arc/home/aydanmckay/spectable_datacuts_paramp_renamed.fits , table without xp coeffs not averaged
+
+/arc/home/aydanmckay/input_catalogue_simple_average_datacuts.h5
