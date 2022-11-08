@@ -7,7 +7,7 @@ stilts="stilts -Xmx150G -Djava.io.tmpdir=${ephemeral} -verbose"
 ########################
 in1=/arc/projects/k-pop/pristine/xmatch/pristine_sdss_sspp_dr17.fits
 in2=/arc/projects/k-pop/pristine/xmatch/pristine_sdss_apogee_dr17.fits
-outfile=/arc/home/aydanmckay/union-spec-phot-table.fits
+outfile=/arc/home/aydanmckay/union-spec-phot-table-new.fits
 
 ${stilts} tmatch2 \
        in1=${in1} \
@@ -23,7 +23,7 @@ ${stilts} tmatch2 \
        ocmd="delcols 'RA(CaHK)_apo Dec(CaHK)_apo CaHK_0_apo'; colmeta -name ra RA(CaHK)_sspp; colmeta -name dec Dec(CaHK)_sspp; colmeta -name CaHK CaHK_0_sspp" \
        out=${outfile}
 
-in1=/arc/home/aydanmckay/union-spec-phot-table.fits
+in1=/arc/home/aydanmckay/union-spec-phot-table-new.fits
 in2=/arc/projects/k-pop/pristine/xmatch/pristine_lamost_dr8_gaiaedr3.fits
 
 ${stilts} tmatch2 \

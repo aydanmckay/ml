@@ -1,23 +1,37 @@
-So far we have the proper working code files:
-/arc/home/aydanmckay/ml/torchnn/network.ipynb
-/arc/home/aydanmckay/ml/torchnn/trainedmodel.ipynb for testing things
-/arc/home/aydanmckay/ml/concat.ipynb
+So far we have the proper working code files:                                                           commenting
+/arc/home/aydanmckay/ml/torchnn/network.ipynb                                                           done.
+/arc/home/aydanmckay/ml/torchnn/trainedmodel.ipynb for testing things                                   done.
+/arc/home/aydanmckay/ml/concat.ipynb                  
 /arc/home/aydanmckay/ml/ColumnAVG.ipynb
-
-/arc/home/aydanmckay/gaiahike/bp_rp_apogee.fits
+                                                                                                        N/A.
+/arc/home/aydanmckay/gaiahike/bp_rp_apogee.fits                                                         N/A.
 /arc/home/aydanmckay/ml/network/prepdatadr3proper.ipynb
-/arc/home/aydanmckay/datacuts.h5
-/arc/home/aydanmckay/torchresmodel/modelL2minmaxcutsbl32lr-2SGDep100.pth
-/arc/home/aydanmckay/torchresplots/lossL2minmaxcutsbl32lr-2SGDep100.png
-/arc/home/aydanmckay/torchresplots/predictionscomparisons.png
-
-/arc/home/aydanmckay/input_catalogue.fits
+/arc/home/aydanmckay/datacuts.h5                                                                        N/A.
+/arc/home/aydanmckay/torchresmodel/modelL2minmaxcutsbl32lr-2SGDep100.pth                                N/A. Depricated
+/arc/home/aydanmckay/torchresplots/lossL2minmaxcutsbl32lr-2SGDep100.png                                 N/A. Depricated
+/arc/home/aydanmckay/torchresplots/predictionscomparisons.png                                           N/A.
+                                                                                                        N/A.
+/arc/home/aydanmckay/input_catalogue.fits                                                               N/A.
 /arc/home/aydanmckay/ml/torchnn/prepinputcat.ipynb
 /arc/home/aydanmckay/ml/ColumnAVG.ipynb
-/arc/home/aydanmckay/input_catalogue.h5
-/arc/home/aydanmckay/torchresmodel/inputcatmodelL2minmaxcutsbl32lr-2SGDep100.pth
-/arc/home/aydanmckay/torchresplots/inputcatlossL2minmaxcutsbl32lr-2SGDep100.png
-/arc/home/aydanmckay/torchresplots/inputcatpredictionscomparisons.png
+/arc/home/aydanmckay/input_catalogue.h5                                                                 N/A.
+/arc/home/aydanmckay/torchresmodel/inputcatmodelL2minmaxcutsbl32lr-2SGDep100.pth                        N/A. Depricated
+/arc/home/aydanmckay/torchresplots/inputcatlossL2minmaxcutsbl32lr-2SGDep100.png                         N/A. Depricated
+/arc/home/aydanmckay/torchresplots/inputcatpredictionscomparisons.png                                   N/A. Depricated
+                                                                                                        N/A.
+What we're working with now.                                                                            N/A.
+                                                                                                        N/A.
+/arc/home/aydanmckay/ml/concat-paramp.ipynb                                                             N/A.
+/arc/home/aydanmckay/input_catalogue_simple_average_hugedatacuts.h5                                     N/A.
+/arc/home/aydanmckay/torchresmodel/trainedmodel_cleaninputcatlossL2MLP_Powerbl32lr0.01SGDep2dropout.pth N/A.
+/arc/home/aydanmckay/torchresplots/lossplot_cleaninputcatlossL2MLP_Powerbl32lr0.01SGDep2dropout.png     N/A.
+/arc/home/aydanmckay/torchresplots/magplots_cleaninputcatlossL2MLP_Powerbl32lr0.01SGDep2dropout.png     N/A.
+                                                                                                        N/A.
+/arc/home/aydanmckay/torchresmodel/trainedmodel_cleanapogeelossL2MLP_Powerbl32lr0.01SGDep2dropout.pth   N/A.
+/arc/home/aydanmckay/torchresplots/lossplot_cleanapogeelossL2MLP_Powerbl32lr0.01SGDep2dropout.png       N/A.
+/arc/home/aydanmckay/torchresplots/magplots_cleanapogeelossL2MLP_Powerbl32lr0.01SGDep2dropout.png       N/A.
+
+
 
 Here's a problem, Gaia-ESO does not have any alpha abundances so I would need to calculate that myself
 same with rave but there's a way to get it based on matching with the cnn catalogue
@@ -46,3 +60,7 @@ files for playing around with (no xp-coeffs) created with
 /arc/home/aydanmckay/spectable_datacuts_paramp_renamed.fits , table without xp coeffs not averaged
 
 /arc/home/aydanmckay/input_catalogue_simple_average_datacuts.h5
+
+prfr models:
+bigdataprfrnoage.ipynb
+jeff-noage-Copy1.ipynb
