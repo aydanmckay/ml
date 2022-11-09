@@ -1,7 +1,7 @@
 # ml
 ## Photometry-Based Stellar Metallicity Estimation
 
-The proper order of how these files are used starts with first running [concat-paramp](aydanmckay/ml/concat-paramp.ipynb). This file contains a lot of bash shells that run scripts from `/ml/xmatch-aydan/` that perform the crossmatching through STILTS, a version of TOPCAT for command line. This file finishes with performing the huge xmatch with all of the Gaia DR3 data and then performing the concatenation of all the tables into one large spectroscopic table matched with Gaia DR3 XP coefficients.
+The proper order of how these files are used starts with first running [concat-paramp](concat-paramp.ipynb). This file contains a lot of bash shells that run scripts from `/ml/xmatch-aydan/` that perform the crossmatching through STILTS, a version of TOPCAT for command line. This file finishes with performing the huge xmatch with all of the Gaia DR3 data and then performing the concatenation of all the tables into one large spectroscopic table matched with Gaia DR3 XP coefficients.
 
 Next, [ColumnAVG](aydanmckay/ml/ColumnAVG.ipynb) is used to collapse all the spectroscopic values into one averaged column, independent of the origin catalogue. This is done very simply as of now, and need a more robust alorithm in the future.
 
