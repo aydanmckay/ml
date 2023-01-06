@@ -64,3 +64,5 @@ files for playing around with (no xp-coeffs) created with
 prfr models:
 bigdataprfrnoage.ipynb
 jeff-noage-Copy1.ipynb
+
+isochrones to determine stellar pops: x axis: g-r, y-axis: r, check other g-'s
