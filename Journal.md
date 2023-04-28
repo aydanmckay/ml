@@ -31,3 +31,6 @@ The LAMOST data is looking alright, what is needed to do still is to match to a 
 The SEGUE data is interesting. The alpha abundances were calculated using only one type of estimator called NGS2, where the recommended SSPP $[T_{eff}]$, $[log \g]$, and $[Fe /H]$ are the adopted parameters from the best estimation from multiple estimators. Instead, I will use NGS1 for $[T_{eff}]$ (There is no NGS@ for $[T_{eff}]$????) and NGS2 for the other 3 parameters. I will use the adopted rv parameters as there weren't many estimators and they'll just be the best ones to use.
 
 So once we have this large dataset, what do we do next? We need to set some measurements as the reference measurements for a boosting algorithm to determine the corrections to. These can either be to the Gaia RVS data or the benchmark stars. There are only about 20-40 benchmark stars, so we'll probably rely on the RVS data. Then we use a boosting algorithm to learning the calibrations of all the other catalogues to RVS. This algorithm will use origin as a parameter, and then determine the calibration for each of the datasets. Then, those sources without a Gaia RVS match (gaia_source_id match), we'll run through the algorithm after training with all those that do have a match being the train/valid/test set.
+
+##### APOGEE DR 17 ASPLUND 2005, GALAH GREVESSE 07
+solar abundance sources
